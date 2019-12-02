@@ -1,0 +1,57 @@
+
+  [{
+    "data": {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  },
+  {
+  "id": 2,
+  "firstName": "Rakesh",
+  "lastName": "Malik",
+  "score": 61,
+  "grade" : "B"
+  },
+  {
+  "id": 3,
+  "firstName": "Steve",
+  "lastName": "Jobs",
+  "score": 41,
+  "grade" : "C"
+
+  },
+  {
+  "id": 4,
+  "firstName": "Bill",
+  "lastName": "Gates",
+  "score": 40,
+  "grade" : "F"
+
+  },
+  {
+  "id": 5,
+  "firstName": "Lady",
+  "lastName": "Gaga",
+  "score": 90,
+  "grade" : "A" },
+  {
+  "id": 6,
+  "firstName": "Don",
+  "lastName": "Bradman",
+  "score": 75,
+  "grade" : "B"
+  },
+  {
+  "id": 7,
+  "firstName": "Nicki",
+  "lastName": "Minaj",
+  "score": 40,
+  "grade" : "F" },
+  {
+  "id": 8,
+  "firstName": "Jeff",
+  "lastName": "Bezos",
+  "score": 55,
+  "grade" : "C" }
+  ]

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <form #saveInformation="ngForm" class="bg-lime">
+                <div class="h2 text-center mt-1">Add Student </div>
+                <div class="form-row mt-3">
+
+                  <div class="form-group col-sm-4 offset-sm-2">
+                    <label for="">First Name</label>
+                    <input type="text" name = "FirstName" class="form-control"  [(ngModel)]="student.firstName" placeholder="FirstName">
+                  </div>
+
+                  <div class="form-group col-sm-4">
+                    <label for="">LastName</label>
+                    <input type="text" name = "LastName" class="form-control" [(ngModel)]="student.lastName" placeholder="LastName">
+                  </div>
+
+                </div>
+
+                <div class="form-row mt-3">
+
+                    <div class="form-group col-sm-4 offset-sm-2">
+                      <label for="">Gender</label>
+                      <input type="text" name = "Gender" class="form-control"  [(ngModel)]="student.gender" placeholder="">
+                    </div>
+
+                    <div class="form-group col-sm-4">
+                      <label for="">Score</label>
+                      <input type="text" name = "Score" class="form-control" [(ngModel)]="student.score" placeholder="">
+                    </div>
+
+                  </div>
+
+
+
+                   <div>
+                         <button class="btn btn-outline-success waves-effect  offset-sm-3" (click)="saveStudentData(saveInformation)" (click)="showSuccess()">ADD</button>
+                  </div>
+
+            </form>
+
+</body>
+</html>

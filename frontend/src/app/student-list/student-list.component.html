@@ -1,0 +1,51 @@
+<div>
+  <h1>Students List</h1>
+</div>
+<div>
+    <button type="button" class="btn btn-primary btn-lg offset-sm-9" routerLink="/add">Add</button>
+  </div>
+<div class="container mt-5">
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Score</th>
+        <th>Grade</th>
+        <th>Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students; index as i" [ngStyle]="{'background-color': student.grade === 'F' ? 'red' : 'none'}">
+
+        <td>{{i +1}}</td>
+        <td *ngIf="student.enrollmentId===editRowId"><input type="text"   class="form-control" [(ngModel)]="student.firstName" required minlength="4"></td>
+        <td *ngIf="student.enrollmentId!==editRowId" (dblclick)="edit(student.enrollmentId)">{{student.firstName}}</td>
+
+        <td *ngIf="student.enrollmentId===editRowId"><input type="text" [(ngModel)]="student.lastName"></td>
+        <td *ngIf="student.enrollmentId!==editRowId" (dblclick)="edit(student.enrollmentId)">{{student.lastName}}</td>
+
+        <td>{{student.gender}}</td>
+        <td *ngIf="student.enrollmentId===editRowId"><input type="text" [(ngModel)]="student.score"></td>
+        <td *ngIf="student.enrollmentId!==editRowId" (dblclick)="edit(student.enrollmentId)">{{student.score}}</td>
+        <td >{{student.grade}}</td>
+
+        <td>
+            <button type="button" class="btn btn-primary btn-sm " (click)="SaveData()">Save</button>
+            <button type="button" class="btn btn-primary btn-sm ml-3" (click)="deleteStudent(student.enrollmentId)">Delete</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- <div>
+  <pre>
+    {{students | json}}
+  </pre>
+</div>
+ -->
